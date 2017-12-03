@@ -3,17 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayOne", "DayOne\DayOne.csproj", "{B6A4D386-F577-4F69-A0E4-2C82ADCE5FF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode", "AdventOrCode\AdventOfCode.csproj", "{3211D3EE-2344-4633-BB4D-B8EBD908A61C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayOne.Tests", "DayOne.Tests\DayOne.Tests.csproj", "{FF4DE866-4310-4F49-918F-564110EB376E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTwo.Tests", "DayTwo.Tests\DayTwo.Tests.csproj", "{C1D56DE4-0D00-46DD-9B48-4DE59DDD6BC2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DayTwo", "DayTwo\DayTwo.csproj", "{A468CEE7-155A-46AF-9232-0DFCEC517F1E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode", "AdventOrCode\AdventOfCode.csproj", "{3211D3EE-2344-4633-BB4D-B8EBD908A61C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Tests", "AdventOfCode.Tests\AdventOfCode.Tests.csproj", "{84F9C587-854F-4A77-A02C-82E67568FC99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.Tests", "AdventOfCode.Tests\AdventOfCode.Tests.csproj", "{84F9C587-854F-4A77-A02C-82E67568FC99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,22 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6A4D386-F577-4F69-A0E4-2C82ADCE5FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6A4D386-F577-4F69-A0E4-2C82ADCE5FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6A4D386-F577-4F69-A0E4-2C82ADCE5FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6A4D386-F577-4F69-A0E4-2C82ADCE5FF9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FF4DE866-4310-4F49-918F-564110EB376E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF4DE866-4310-4F49-918F-564110EB376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF4DE866-4310-4F49-918F-564110EB376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FF4DE866-4310-4F49-918F-564110EB376E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1D56DE4-0D00-46DD-9B48-4DE59DDD6BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1D56DE4-0D00-46DD-9B48-4DE59DDD6BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1D56DE4-0D00-46DD-9B48-4DE59DDD6BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1D56DE4-0D00-46DD-9B48-4DE59DDD6BC2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A468CEE7-155A-46AF-9232-0DFCEC517F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A468CEE7-155A-46AF-9232-0DFCEC517F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A468CEE7-155A-46AF-9232-0DFCEC517F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A468CEE7-155A-46AF-9232-0DFCEC517F1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3211D3EE-2344-4633-BB4D-B8EBD908A61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3211D3EE-2344-4633-BB4D-B8EBD908A61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3211D3EE-2344-4633-BB4D-B8EBD908A61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
