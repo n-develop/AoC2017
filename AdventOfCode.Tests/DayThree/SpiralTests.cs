@@ -69,7 +69,7 @@ namespace AdventOfCode.Tests.DayThree
         [InlineData(27, 54)]
         public void SecondStage(int input, int output)
         {
-            var spiral = new Spiral(199);
+            var spiral = new SpiralStageTwo(199);
 
             var nextValue = spiral.FindValueSecondStage(input);
 
@@ -79,7 +79,7 @@ namespace AdventOfCode.Tests.DayThree
         [Fact]
         public void RealInputStageTwo()
         {
-            var spiral = new Spiral(368078);
+            var spiral = new SpiralStageTwo(368078);
 
             var nextValue = spiral.FindValueSecondStage(368078);
 
