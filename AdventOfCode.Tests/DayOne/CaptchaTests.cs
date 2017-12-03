@@ -1,6 +1,7 @@
+using AdventOfCode.DayOne;
 using Xunit;
 
-namespace DayOne.Tests
+namespace AdventOfCode.Tests.DayOne
 {
     public class CaptchaTests
     {

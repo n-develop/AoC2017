@@ -1,4 +1,4 @@
-﻿namespace DayOne
+﻿namespace AdventOfCode.DayOne
 {
     public class Captcha
     {

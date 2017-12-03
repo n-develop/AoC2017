@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DayTwo
+namespace AdventOfCode.DayTwo
 {
     public class Spreadsheet
     {

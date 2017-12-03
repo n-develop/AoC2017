@@ -1,6 +1,7 @@
 using Xunit;
+using AdventOfCode.DayTwo;
 
-namespace DayTwo.Tests
+namespace AdventOfCode.Tests.DayTwo
 {
     public class SpreadsheetTests
     {
