@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Drawing;
 
 namespace AdventOfCode.DayThree
 {
     public class Spiral
     {
-        private int[,] _matrix;
-        private int _size;
-        private int _center;
+        private readonly int _size;
+        private readonly int _center;
+        private readonly int _input;
 
         public Spiral(int maxValue)
         {
+            _input = maxValue;
             var squareRoot = Math.Sqrt(maxValue);
             var intSqrt = (int)squareRoot;
             if (intSqrt < squareRoot)
@@ -21,36 +21,50 @@ namespace AdventOfCode.DayThree
             _center = _size / 2;
         }
 
-        public int GetSize()
+        public int GetDistance()
         {
-            return _size;
-        }
-
-        public void BuildMatrix()
-        {
-            _matrix = new int[_size, _size];
             var y = _center;
             var x = _center;
-            var value = 1;
+            var currentValue = 1;
 
-            _matrix[y, x] = value++;
+            if (currentValue == _input)
+            {
+                return DistanceFromCenter(y, x);
+            }
+
+            currentValue++;
 
             var currentSquareSize = 1;
             while (currentSquareSize <= _size)
             {
                 for (int i = 0; i < currentSquareSize - 2; i++)
                 {
-                    _matrix[--y, x] = value++;
+                    --y;
+                    if (currentValue == _input)
+                    {
+                        return DistanceFromCenter(y, x);
+                    }
+                    currentValue++;
                 }
 
                 for (int i = 0; i < currentSquareSize - 1; i++)
                 {
-                    _matrix[y, --x] = value++;
+                    --x;
+                    if (currentValue == _input)
+                    {
+                        return DistanceFromCenter(y, x);
+                    }
+                    currentValue++;
                 }
 
                 for (int i = 0; i < currentSquareSize - 1; i++)
                 {
-                    _matrix[++y, x] = value++;
+                    ++y;
+                    if (currentValue == _input)
+                    {
+                        return DistanceFromCenter(y, x);
+                    }
+                    currentValue++;
                 }
                 for (int i = 0; i < currentSquareSize; i++)
                 {
@@ -58,42 +72,24 @@ namespace AdventOfCode.DayThree
                     {
                         break;
                     }
-                    _matrix[y, ++x] = value++;
+                    ++x;
+                    if (currentValue == _input)
+                    {
+                        return DistanceFromCenter(y, x);
+                    }
+                    currentValue++;
                 }
 
                 currentSquareSize += 2;
             }
+            return -1;
         }
 
-        public int[,] GetMatrix()
+        private int DistanceFromCenter(int y, int x)
         {
-            return _matrix;
+            return Math.Abs(_center - y) + Math.Abs(_center - x);
         }
 
-        public int FindDistance(int target)
-        {
-            var targetValue = FindTargetValue(target);
 
-            return Math.Abs(_center - targetValue.Y) + Math.Abs(_center - targetValue.X);
-        }
-
-        private Point FindTargetValue(int target)
-        {
-            var targetValue = Point.Empty;
-
-            for (int row = 0; row < _matrix.GetLength(0); row++)
-            {
-                for (int col = 0; col < _matrix.GetLength(1); col++)
-                {
-                    if (_matrix[row, col] == target)
-                    {
-                        targetValue.X = col;
-                        targetValue.Y = row;
-                        return targetValue;
-                    }
-                }
-            }
-            return targetValue;
-        }
     }
 }
