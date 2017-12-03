@@ -7,8 +7,9 @@ namespace AdventOfCode.DayThree
     {
         private int[,] _matrix;
         private int _size;
+        private int _center;
 
-        public int DetermineSize(int maxValue)
+        public Spiral(int maxValue)
         {
             var squareRoot = Math.Sqrt(maxValue);
             var intSqrt = (int)squareRoot;
@@ -17,14 +18,19 @@ namespace AdventOfCode.DayThree
                 intSqrt++;
             }
             _size = intSqrt % 2 == 0 ? intSqrt + 1 : intSqrt;
+            _center = _size / 2;
+        }
+
+        public int GetSize()
+        {
             return _size;
         }
 
         public void BuildMatrix()
         {
             _matrix = new int[_size, _size];
-            var y = (_size / 2);
-            var x = y;
+            var y = _center;
+            var x = _center;
             var value = 1;
 
             _matrix[y, x] = value++;
@@ -67,10 +73,9 @@ namespace AdventOfCode.DayThree
 
         public int FindDistance(int target)
         {
-            var center = _size / 2;
             var targetValue = FindTargetValue(target);
 
-            return Math.Abs(center - targetValue.Y) + Math.Abs(center - targetValue.X);
+            return Math.Abs(_center - targetValue.Y) + Math.Abs(_center - targetValue.X);
         }
 
         private Point FindTargetValue(int target)
@@ -95,8 +100,8 @@ namespace AdventOfCode.DayThree
         public int FindValueSecondStage(int input)
         {
             _matrix = new int[_size, _size];
-            var y = _size / 2;
-            var x = y;
+            var y = _center;
+            var x = _center;
 
             _matrix[y, x] = 1;
             ++x;

@@ -13,9 +13,9 @@ namespace AdventOfCode.Tests.DayThree
         [InlineData(23, 5)]
         public void DetermineQuareSize(int value, int expectedSize)
         {
-            var spiral = new Spiral();
+            var spiral = new Spiral(value);
 
-            var size = spiral.DetermineSize(value);
+            var size = spiral.GetSize();
 
             Assert.Equal(expectedSize, size);
         }
@@ -23,8 +23,7 @@ namespace AdventOfCode.Tests.DayThree
         [Fact]
         public void BuildMatrix()
         {
-            var spiral = new Spiral();
-            spiral.DetermineSize(24);
+            var spiral = new Spiral(24);
             var matrix = new int[,]
             {
                 {17, 16, 15, 14, 13},
@@ -45,8 +44,7 @@ namespace AdventOfCode.Tests.DayThree
         [InlineData(1, 0)]
         public void FindDistance(int target, int expectedDistance)
         {
-            var spiral = new Spiral();
-            spiral.DetermineSize(25);
+            var spiral = new Spiral(25);
             spiral.BuildMatrix();
 
             var distance = spiral.FindDistance(target);
@@ -57,8 +55,7 @@ namespace AdventOfCode.Tests.DayThree
         [Fact]
         public void RealInput()
         {
-            var spiral = new Spiral();
-            spiral.DetermineSize(368078);
+            var spiral = new Spiral(368078);
             spiral.BuildMatrix();
 
             var distance = spiral.FindDistance(368078);
@@ -72,8 +69,7 @@ namespace AdventOfCode.Tests.DayThree
         [InlineData(27, 54)]
         public void SecondStage(int input, int output)
         {
-            var spiral = new Spiral();
-            spiral.DetermineSize(199);
+            var spiral = new Spiral(199);
 
             var nextValue = spiral.FindValueSecondStage(input);
 
@@ -83,8 +79,7 @@ namespace AdventOfCode.Tests.DayThree
         [Fact]
         public void RealInputStageTwo()
         {
-            var spiral = new Spiral();
-            spiral.DetermineSize(368078);
+            var spiral = new Spiral(368078);
 
             var nextValue = spiral.FindValueSecondStage(368078);
 
