@@ -34,9 +34,8 @@ namespace AdventOfCode.DayThree
             var value = 1;
 
             _matrix[y, x] = value++;
-            _matrix[y, ++x] = value++;
 
-            var currentSquareSize = 3;
+            var currentSquareSize = 1;
             while (currentSquareSize <= _size)
             {
                 for (int i = 0; i < currentSquareSize - 2; i++)
